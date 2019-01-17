@@ -1,9 +1,17 @@
 #include <stdio.h>
 
+struct point
+{
+    int x;
+    int y;
+};
+
 int main()
 {
 
     printf("欢迎进专车管理系统\n");
+    int index = 0;
+    struct point arr[100];
 
     while (1)
     {
@@ -14,25 +22,40 @@ int main()
         printf("5--退出\n");
         printf("请选择所需功能\n");
         int code;
-        scanf("%d",&code);
-        
-        if (code==1) {
+        scanf("%d", &code);
+
+        if (code == 1)
+        {
+            printf("请输入车辆位置\n");
+            int x;
+            int y;
+            scanf("%d", &x);
+            scanf("%d", &y);
+            arr[index].x = x;
+            arr[index].y = y;
+            index++;
+            printf("添加成功，点击回车继续\n");
+            char a;
+            scanf("%c", a);
+            scanf("%c", a);
+        }
+        if (code == 2)
+        {
             /* code */
         }
-        if (code==2) {
+        if (code == 3)
+        {
             /* code */
         }
-        if (code==3) {
+        if (code == 4)
+        {
             /* code */
         }
-        if (code==4) {
-            /* code */
-        }
-        if (code==5) {
+        if (code == 5)
+        {
             printf("点击回车，退出系统\n");
             break;
         }
-        
     }
 
     return 0;
